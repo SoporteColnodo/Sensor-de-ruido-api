@@ -9,7 +9,8 @@ void RTCSet() {
     errLed();
     while (1);
   } else {
-    okLed();
+      DS1307_RTC.adjust(DateTime(F(__DATE__), F(__TIME__))); // En caso de descalibración del RTC y conectado al PC
+      okLed();
   }
 
   DateTime now = DS1307_RTC.now();

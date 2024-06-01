@@ -47,7 +47,7 @@ String LoginUser(String User, String Password)
 }
 
 //Generación de token y envio de información
-String Create(String db, String lat, String lng,String Token)
+String CrearRegistro( double lat, double lng, double db,String Token)
 {
   HTTPClient http;
   http.begin(ApiHost + "/alertas/registro");
